@@ -10,4 +10,6 @@
 - iPhone Safari / Android Chrome 添加到主屏幕引导
 - PWA manifest、Service Worker 与离线缓存
 
+Service Worker 对页面导航采用本地缓存优先、后台更新策略。用户至少成功访问过一次并完成缓存后，即使网络请求失败，也可显示已经缓存的找回页。
+
 这是纯静态页面，可直接部署到 GitHub Pages。
