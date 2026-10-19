@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#fff7fb">
+  <meta name="description" content="兔娘永久收藏页。记住 tuniang.ai，迷路时从这里回到兔娘。">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./icon-192.png">
+  <title>兔娘 · 防走丢</title>
+  <style>
+    :root{--pink:#f45f97;--pink-deep:#d8477d;--pink-soft:#fff0f6;--plum:#2c1f35;--ink:#2a2330;--muted:#7b6f81;--line:#ecdde7;--paper:#fffafd;--ok:#28a369;--warn:#b87227}*{box-sizing:border-box}html{color-scheme:light}body{margin:0;min-height:100vh;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;color:var(--ink);background:radial-gradient(900px 500px at 50% -100px,#ffd9e8 0%,transparent 68%),linear-gradient(165deg,#fffafd 0%,#fff7fb 48%,#f9f2ff 100%);padding:max(24px,env(safe-area-inset-top)) 16px calc(30px + env(safe-area-inset-bottom))}.wrap{width:min(100%,480px);margin:auto}.top{text-align:center;padding:8px 0 24px}.logo{width:142px;height:auto}.kicker{margin-top:12px;color:var(--muted);font-size:13px;letter-spacing:.08em}.hero{position:relative;overflow:hidden;padding:26px 22px 22px;border-radius:26px;color:#fff;background:linear-gradient(140deg,#f45f97 0%,#e34f8d 48%,#9b5de5 100%);box-shadow:0 22px 55px rgba(214,65,121,.25)}.hero:before,.hero:after{content:"";position:absolute;border-radius:50%;background:#ffffff18}.hero:before{width:170px;height:170px;right:-78px;top:-74px}.hero:after{width:86px;height:86px;left:-40px;bottom:-38px}.pill{position:relative;display:inline-flex;align-items:center;gap:8px;padding:6px 11px;border-radius:999px;background:#ffffff1f;font-size:12px;font-weight:650}.dot{width:8px;height:8px;border-radius:50%;background:#fff;box-shadow:0 0 0 4px #ffffff24}.pill.ok .dot{background:#9ff0c3}.pill.bad .dot{background:#ffd29d}.hero h1{position:relative;margin:20px 0 8px;font-size:clamp(32px,9vw,44px);line-height:1.08;letter-spacing:-.04em}.hero p{position:relative;margin:0;max-width:360px;color:#fff9;font-size:14px;line-height:1.75}.domain{position:relative;display:flex;align-items:center;gap:10px;margin-top:22px;padding:13px 14px;border:1px solid #ffffff30;border-radius:15px;background:#ffffff16}.domain strong{flex:1;font-size:18px;letter-spacing:.01em}.copy{width:42px;height:42px;border:0;border-radius:12px;background:#fff;color:var(--pink-deep);font-size:18px;cursor:pointer}.primary{position:relative;display:flex;align-items:center;justify-content:center;gap:8px;margin-top:12px;min-height:52px;border-radius:15px;background:#fff;color:var(--pink-deep);font-size:16px;font-weight:750;text-decoration:none;box-shadow:0 8px 22px #7d24502d}.primary:active{transform:scale(.99)}.card{margin-top:16px;padding:20px;border:1px solid var(--line);border-radius:20px;background:#fffc;box-shadow:0 14px 35px rgba(61,31,54,.06);backdrop-filter:blur(12px)}.section-title{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:15px}.section-title h2{margin:0;font-size:17px}.section-title span{color:var(--muted);font-size:12px}.save-list{display:grid;gap:8px}.save-item{display:flex;align-items:center;gap:13px;padding:12px;border-radius:14px;background:var(--pink-soft)}.save-icon{display:grid;place-items:center;flex:none;width:36px;height:36px;border-radius:11px;background:#fff;color:var(--pink);font-size:17px}.save-item b{display:block;font-size:14px}.save-item small{display:block;margin-top:2px;color:var(--muted);font-size:12px;line-height:1.5}.guide-btn{width:100%;min-height:46px;margin-top:12px;border:1px solid #f2b5cd;border-radius:13px;background:#fff;color:var(--pink-deep);font:inherit;font-size:14px;font-weight:650;cursor:pointer}.permanent{display:flex;align-items:center;gap:12px;padding:13px 0}.permanent+.permanent{border-top:1px solid var(--line)}.permanent .label{flex:1}.permanent b{font-size:14px}.permanent small{display:block;margin-top:3px;color:var(--muted);font-size:12px;word-break:break-all}.mini-copy{border:0;background:var(--pink-soft);color:var(--pink-deep);border-radius:10px;padding:9px 11px;cursor:pointer}.notice{margin:16px 5px 0;color:var(--muted);font-size:12px;line-height:1.75;text-align:center}.notice b{color:var(--ink)}footer{text-align:center;padding:24px 0 6px;color:#a293a7;font-size:11px}.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom));z-index:30;transform:translate(-50%,20px);padding:10px 15px;border-radius:999px;background:var(--plum);color:#fff;font-size:13px;opacity:0;pointer-events:none;transition:.2s}.toast.show{opacity:1;transform:translate(-50%,0)}.backdrop{position:fixed;inset:0;z-index:40;display:none;align-items:flex-end;justify-content:center;padding:16px;background:#281a2b88;backdrop-filter:blur(6px)}.backdrop.open{display:flex}.sheet{width:min(100%,470px);max-height:min(86vh,720px);overflow:auto;border-radius:25px;background:var(--paper);padding:22px;box-shadow:0 20px 70px #24102755}.sheet-head{display:flex;align-items:center;justify-content:space-between}.sheet h2{margin:0;font-size:20px}.close{width:42px;height:42px;border:0;border-radius:50%;background:var(--pink-soft);color:var(--pink-deep);font-size:22px;cursor:pointer}.tabs{display:flex;margin:18px 0;padding:4px;border-radius:13px;background:#f3eaf1}.tab{flex:1;min-height:42px;border:0;border-radius:10px;background:transparent;color:var(--muted);font:inherit;font-weight:650;cursor:pointer}.tab.active{background:#fff;color:var(--pink-deep);box-shadow:0 3px 10px #54223d12}.steps{list-style:none;margin:0;padding:2px 0;display:grid;gap:13px}.steps li{display:flex;gap:12px;align-items:flex-start;font-size:14px;line-height:1.65}.num{display:grid;place-items:center;flex:none;width:28px;height:28px;border-radius:50%;background:var(--pink);color:#fff;font-size:12px;font-weight:750}.sheet-note{margin:17px 0 0;padding:13px;border-radius:13px;background:var(--pink-soft);color:var(--muted);font-size:12px;line-height:1.7}.sheet-action{display:block;width:100%;min-height:48px;margin-top:16px;border:0;border-radius:13px;background:var(--pink);color:#fff;font:inherit;font-weight:700;cursor:pointer}.hidden{display:none!important}@media(max-width:360px){body{padding-inline:11px}.hero{padding:22px 17px}.card{padding:17px}}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header class="top"><img class="logo" src="./tuniang-logo.svg" alt="兔娘"><div class="kicker">永久收藏页 · 防走丢</div></header>
+    <section class="hero">
+      <div id="status" class="pill"><span class="dot"></span><span id="status-text">正在确认官网状态…</span></div>
+      <h1>迷路了？<br>从这里回到兔娘</h1>
+      <p>请认准唯一官网地址。建议收藏本页，下次入口找不到时，随时回来。</p>
+      <div class="domain"><strong>tuniang.ai</strong><button class="copy" type="button" data-copy="https://tuniang.ai/" aria-label="复制兔娘官网地址">⧉</button></div>
+      <a class="primary" href="https://tuniang.ai/" target="_blank" rel="noopener noreferrer">立即回到兔娘 <span aria-hidden="true">→</span></a>
+    </section>
+
+    <section class="card">
+      <div class="section-title"><h2>先把回家的路保存好</h2><span>30 秒完成</span></div>
+      <div class="save-list">
+        <div class="save-item"><span class="save-icon">♡</span><span><b>收藏这个防走丢页面</b><small>电脑按 Ctrl/⌘ + D，手机使用浏览器收藏。</small></span></div>
+        <div class="save-item"><span class="save-icon">＋</span><span><b>添加到手机主屏幕</b><small>像 App 一样放在桌面，轻点即可回来。</small></span></div>
+      </div>
+      <button id="guide-open" class="guide-btn" type="button">查看 iPhone / Android 保存方法</button>
+    </section>
+
+    <section class="card">
+      <div class="section-title"><h2>认准这两个地址</h2><span>谨防仿冒</span></div>
+      <div class="permanent"><span class="save-icon">兔</span><span class="label"><b>兔娘官网</b><small>https://tuniang.ai/</small></span><button class="mini-copy" type="button" data-copy="https://tuniang.ai/">复制</button></div>
+      <div class="permanent"><span class="save-icon">★</span><span class="label"><b>永久收藏页</b><small id="finder-url">正在读取当前地址…</small></span><button id="finder-copy" class="mini-copy" type="button">复制</button></div>
+    </section>
+
+    <p class="notice">本页只负责带你回到 <b>tuniang.ai</b>，不会索要账号、密码或验证码。<br>若官网暂时无法打开，请稍后重试或切换网络。</p>
+    <footer>© 2026 兔娘 · 请认准 tuniang.ai</footer>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite">已复制</div>
+  <div id="guide" class="backdrop" role="dialog" aria-modal="true" aria-labelledby="guide-title">
+    <section class="sheet">
+      <div class="sheet-head"><h2 id="guide-title">保存到手机桌面</h2><button id="guide-close" class="close" type="button" aria-label="关闭">×</button></div>
+      <div class="tabs" role="tablist"><button class="tab active" type="button" data-tab="ios">iPhone · Safari</button><button class="tab" type="button" data-tab="android">Android · Chrome</button></div>
+      <ol id="ios" class="steps"><li><span class="num">1</span><span>用 <b>Safari</b> 打开当前防走丢页面。</span></li><li><span class="num">2</span><span>轻点浏览器的 <b>分享</b> 按钮。</span></li><li><span class="num">3</span><span>向下找到并选择 <b>添加到主屏幕</b>。</span></li><li><span class="num">4</span><span>名称保留“兔娘”，轻点右上角 <b>添加</b>。</span></li></ol>
+      <ol id="android" class="steps hidden"><li><span class="num">1</span><span>用 <b>Chrome</b> 打开当前防走丢页面。</span></li><li><span class="num">2</span><span>轻点右上角 <b>⋮</b> 浏览器菜单。</span></li><li><span class="num">3</span><span>选择 <b>安装应用</b> 或 <b>添加到主屏幕</b>。</span></li><li><span class="num">4</span><span>按系统提示确认添加。</span></li></ol>
+      <p class="sheet-note">微信等内置浏览器可能不显示该选项，请先选择“在浏览器中打开”。不同系统版本的菜单名称可能略有不同。</p>
+      <button id="install" class="sheet-action hidden" type="button">安装到主屏幕</button>
+      <button id="guide-done" class="sheet-action" type="button">知道了</button>
+    </section>
+  </div>
+
+  <script>
+    (function(){
+      var official='https://tuniang.ai/';
+      var finder=location.href.split('?')[0].split('#')[0];
+      var toast=document.getElementById('toast');
+      var status=document.getElementById('status');
+      var statusText=document.getElementById('status-text');
+      var finderUrl=document.getElementById('finder-url');
+      var guide=document.getElementById('guide');
+      var install=document.getElementById('install');
+      var deferredPrompt=null;
+      finderUrl.textContent=finder;
+      function say(text){toast.textContent=text;toast.classList.add('show');setTimeout(function(){toast.classList.remove('show')},1500)}
+      function copy(text){
+        if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(text).then(function(){say('地址已复制')}).catch(function(){fallback(text)})}
+        else fallback(text);
+      }
+      function fallback(text){var area=document.createElement('textarea');area.value=text;area.style.position='fixed';area.style.opacity='0';document.body.appendChild(area);area.select();try{document.execCommand('copy');say('地址已复制')}catch(e){say('请长按地址复制')}area.remove()}
+      document.querySelectorAll('[data-copy]').forEach(function(button){button.addEventListener('click',function(){copy(button.getAttribute('data-copy'))})});
+      document.getElementById('finder-copy').addEventListener('click',function(){copy(finder)});
+      var probe=new Image(),done=false,timer=setTimeout(function(){finish(false)},5500);
+      function finish(ok){if(done)return;done=true;clearTimeout(timer);status.classList.add(ok?'ok':'bad');statusText.textContent=ok?'官网当前可访问':'官网响应较慢，请稍后重试'}
+      probe.onload=function(){finish(true)};probe.onerror=function(){finish(false)};probe.src=official+'assets/tu-niang-logo.svg?_='+Date.now();
+      function closeGuide(){guide.classList.remove('open')}
+      document.getElementById('guide-open').addEventListener('click',function(){guide.classList.add('open')});
+      document.getElementById('guide-close').addEventListener('click',closeGuide);document.getElementById('guide-done').addEventListener('click',closeGuide);
+      guide.addEventListener('click',function(e){if(e.target===guide)closeGuide()});
+      document.querySelectorAll('[data-tab]').forEach(function(tab){tab.addEventListener('click',function(){document.querySelectorAll('[data-tab]').forEach(function(t){t.classList.toggle('active',t===tab)});document.getElementById('ios').classList.toggle('hidden',tab.dataset.tab!=='ios');document.getElementById('android').classList.toggle('hidden',tab.dataset.tab!=='android')})});
+      window.addEventListener('beforeinstallprompt',function(e){e.preventDefault();deferredPrompt=e;install.classList.remove('hidden')});
+      install.addEventListener('click',function(){if(!deferredPrompt)return;var prompt=deferredPrompt;deferredPrompt=null;prompt.prompt();prompt.userChoice.finally(function(){install.classList.add('hidden')})});
+      if('serviceWorker' in navigator)navigator.serviceWorker.register('./sw.js').catch(function(){});
+    })();
+  </script>
+</body>
+</html>
