@@ -1,4 +1,4 @@
-const CACHE='tuniang-finder-v1';
+const CACHE='tuniang-finder-v2';
 const ASSETS=['./','./index.html','./tuniang-logo.svg','./icon.svg','./icon-192.png','./icon-512.png','./manifest.webmanifest'];
 self.addEventListener('install',event=>{event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS)));self.skipWaiting()});
 self.addEventListener('activate',event=>{event.waitUntil(Promise.all([self.clients.claim(),caches.keys().then(keys=>Promise.all(keys.filter(key=>key.startsWith('tuniang-finder-')&&key!==CACHE).map(key=>caches.delete(key))))]))});
